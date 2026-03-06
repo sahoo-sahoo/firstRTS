@@ -1,0 +1,19 @@
+# Godot 4 specific ignores
+.godot/
+*.tmp
+*.bak
+
+# Export
+export/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.code-workspace
+
+godot_error.log
+godot_output.log

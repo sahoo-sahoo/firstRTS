@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+  <rect width="128" height="128" rx="16" fill="#1a1a2e"/>
+  <text x="64" y="54" font-family="monospace" font-size="36" font-weight="bold" fill="#e94560" text-anchor="middle">RTS</text>
+  <text x="64" y="86" font-family="monospace" font-size="14" fill="#0f3460" text-anchor="middle">FirstRTS</text>
+  <polygon points="40,96 64,108 88,96" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+</svg>

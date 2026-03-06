@@ -1,0 +1,1 @@
+C:\Godot\godot.exe --headless --path "D:\Workspace\gitlab\Code\game\firstRTS" --export-release "Windows" "build\firstRTS.exe"
